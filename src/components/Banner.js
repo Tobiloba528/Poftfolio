@@ -8,7 +8,7 @@ const Banner = () => {
       <Inner>
         <div>
           <h3>Hi, &nbsp; my name is</h3>
-          <h1>Tobiloba Badoo</h1>
+          <h1>Tobiloba</h1>
           <h1 className="second">
             I <span className='one'>build</span> things for the <span className='one'>web</span>.
           </h1>
