@@ -23,7 +23,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <Container>
         {width > 730 && <Side>
           <SideBar />
