@@ -10,19 +10,30 @@ import {
 const SideBar = () => {
   return (
     <Bar>
-      <IconContext.Provider value={{ color: "#65ffda", size: 20 }}>
+      <IconContext.Provider value={{ color: "#65ffda", size: 24 }}>
         <List>
           <Item>
-            <AiFillGithub />
+            <a href="https://github.com/Tobiloba528" target="_blank">
+              <AiFillGithub />
+            </a>
           </Item>
           <Item>
-            <AiOutlineTwitter />
+            <a href="https://twitter.com/boy__tobiloba" target="_blank">
+              <AiOutlineTwitter />
+            </a>
           </Item>
           <Item>
-            <AiFillInstagram />
+            <a href="https://www.instagram.com/iam_thobyson/" target="_blank">
+              <AiFillInstagram />
+            </a>
           </Item>
           <Item>
-            <AiFillLinkedin />
+            <a
+              href="https://www.linkedin.com/in/omitomo-tobiloba/"
+              target="_blank"
+            >
+              <AiFillLinkedin />
+            </a>
           </Item>
           <Item remove>
             <Line></Line>

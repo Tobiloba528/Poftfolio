@@ -8,6 +8,7 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.colors.top};
   background: transparent;
   font-family: 'Arvo', serif;
+  cursor: pointer;
 `;
 
 

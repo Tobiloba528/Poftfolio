@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import { Button } from "../styles";
 import Lottie from "react-lottie";
 
@@ -18,7 +19,9 @@ const Banner = () => {
             websites and applications. I enjoy solving problem, hence I deliver
             top notch products and <span className="two">solutions</span>.
           </p>
-          <Button>Get in touch</Button>
+          <Link to="contact" smooth={true} duration={1000}>
+            <Button>Get in touch</Button>
+          </Link>
         </div>
       </Inner>
     </StyledBanner>

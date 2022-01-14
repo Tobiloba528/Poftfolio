@@ -7,7 +7,7 @@ import { IconContext } from "react-icons";
 const About = () => {
   return (
     <StyledAbout>
-      <Header>
+      <Header id="about">
         <h3>About Me </h3>
         <Line></Line>
       </Header>
@@ -79,7 +79,6 @@ const StyledAbout = styled.div`
   width: 80%;
   min-height: 70vh;
   margin: 0 auto;
-  
 `;
 
 const Header = styled.div`
@@ -93,10 +92,9 @@ const Header = styled.div`
     color: ${({ theme }) => theme.colors.first};
   }
 
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     width: 100%;
   }
-
 `;
 
 const Line = styled.div`
@@ -115,14 +113,13 @@ const Inner = styled.div`
     flex: 1;
   }
 
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     display: block;
     width: 100%;
   }
 `;
 
 const Content = styled.div`
-
   p {
     line-height: 30px;
     font-size: 16px;
@@ -132,13 +129,13 @@ const Content = styled.div`
     color: ${({ theme }) => theme.colors.top};
   }
 
-  @media (max-width: 850px){
+  @media (max-width: 850px) {
     margin-bottom: 30px;
 
     font-size: 12px;
-  p {
-    font-size: 15px;
-  }
+    p {
+      font-size: 15px;
+    }
     /* width: 100%; */
   }
 `;
@@ -146,13 +143,10 @@ const Content = styled.div`
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-
 `;
 
 const ImageLayer = styled.div`
   position: relative;
-  width: 18em;
-  height: 18em;
 
   &:before {
     content: "";
@@ -164,6 +158,15 @@ const ImageLayer = styled.div`
     top: 10px;
     border: 3px solid #65ffda;
     border-radius: 5px;
+  }
+
+
+  @media (max-width: 550px) {
+    &:before {
+      right: -10px;
+      width: 15em;
+      height: 15em;
+    }
   }
 `;
 
@@ -181,15 +184,21 @@ const SecondLayer = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    width: 18em;
-    height: 18em;
     border-radius: 5px;
   }
+
+  &::hover{
+    background: red;
+  }
+
+  @media (max-width: 550px) {
+    width: 15em;
+    height: 15em;
+  }
+
 `;
 
 const Image = styled.img`
-  /* width: 60%;
-  height: 300px; */
   width: 100%;
   height: 100%;
   object-fit: cover;

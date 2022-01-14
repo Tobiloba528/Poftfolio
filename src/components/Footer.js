@@ -10,7 +10,7 @@ import { Button } from "../styles";
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <StyledFooter id="contact">
       <Container>
         <Inner>
           <h3>What's Next?</h3>
@@ -21,22 +21,33 @@ const Footer = () => {
             button below and send an email to{" "}
             <span>omitomotobiloba@gmail.com</span>
           </p>
-          <Button>Send Message</Button>
+          <Button><Anchor href="mailto:omitomotobiloba@gmail.com">Send Message</Anchor></Button>
         </Inner>
       </Container>
-      <IconContext.Provider value={{ color: "#65ffda", size: 20 }}>
+      <IconContext.Provider value={{ color: "#65ffda", size: 24 }}>
         <List>
           <Item>
-            <AiFillGithub />
+            <a href="https://github.com/Tobiloba528" target="_blank">
+              <AiFillGithub />
+            </a>
           </Item>
           <Item>
-            <AiOutlineTwitter />
+            <a href="https://twitter.com/boy__tobiloba" target="_blank">
+              <AiOutlineTwitter />
+            </a>
           </Item>
           <Item>
-            <AiFillInstagram />
+            <a href="https://www.instagram.com/iam_thobyson/" target="_blank">
+              <AiFillInstagram />
+            </a>
           </Item>
           <Item>
-            <AiFillLinkedin />
+            <a
+              href="https://www.linkedin.com/in/omitomo-tobiloba/"
+              target="_blank"
+            >
+              <AiFillLinkedin />
+            </a>
           </Item>
         </List>
       </IconContext.Provider>
@@ -97,17 +108,16 @@ const Inner = styled.div`
   @media (max-width: 550px) {
     width: 90%;
     h1 {
-    font-size: 35px;
-  }
+      font-size: 35px;
+    }
 
-  p {
-    font-size: 15px;
-  }
+    p {
+      font-size: 15px;
+    }
 
-  h3 {
-    font-size: 20px;
-  }
-    
+    h3 {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -125,16 +135,8 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  flex:  1;
+  flex: 1;
 `;
-
-
-
-
-
-
-
-
 
 const End = styled.p`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
@@ -153,5 +155,10 @@ const End = styled.p`
     font-size: 15px;
   }
 `;
+
+const Anchor = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.top};
+`
 
 export default Footer;
