@@ -137,7 +137,7 @@ const Content = styled.div`
 
     font-size: 12px;
   p {
-    font-size: 12px;
+    font-size: 15px;
   }
     /* width: 100%; */
   }

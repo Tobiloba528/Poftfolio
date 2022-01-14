@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BiMenuAltRight } from "react-icons/bi";
-import  useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "../hooks/useWindowSize";
 import { Button } from "../styles";
 
 const NavBar = () => {
@@ -28,7 +28,7 @@ const NavBar = () => {
             </li>
           </List>
         ) : (
-          <BiMenuAltRight size={40} color={'#65ffda'}/>
+          <BiMenuAltRight size={40} color={"#65ffda"} />
         )}
       </Inner>
     </Nav>
