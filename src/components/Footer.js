@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { IconContext } from "react-icons";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import { Button } from "../styles";
 
 const Footer = () => {
@@ -17,6 +24,23 @@ const Footer = () => {
           <Button>Send Message</Button>
         </Inner>
       </Container>
+      <IconContext.Provider value={{ color: "#65ffda", size: 20 }}>
+        <List>
+          <Item>
+            <AiFillGithub />
+          </Item>
+          <Item>
+            <AiOutlineTwitter />
+          </Item>
+          <Item>
+            <AiFillInstagram />
+          </Item>
+          <Item>
+            <AiFillLinkedin />
+          </Item>
+        </List>
+      </IconContext.Provider>
+
       <End>
         Built by <span className="one">Omitomo Tobiloba</span>. Design inspired
         by <span className="two">Brittany Chiang</span>
@@ -28,6 +52,10 @@ const Footer = () => {
 const StyledFooter = styled.div`
   text-align: center;
   width: 90%;
+
+  @media (max-width: 730px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -61,17 +89,68 @@ const Inner = styled.div`
   span {
     color: #e66470;
   }
+
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+
+  @media (max-width: 550px) {
+    width: 90%;
+    h1 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+    
+  }
 `;
+
+const List = styled.ul`
+  list-style: none;
+  width: 50%;
+  display: none;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: 730px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
+const Item = styled.li`
+  flex:  1;
+`;
+
+
+
+
+
+
+
+
 
 const End = styled.p`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
   font-family: "Arvo", serif;
+  margin: 10px auto;
 
   .one {
     color: rgb(101, 255, 218);
   }
   .two {
     color: #e66470;
+  }
+
+  @media (max-width: 550px) {
+    width: 90%;
+    font-size: 15px;
   }
 `;
 

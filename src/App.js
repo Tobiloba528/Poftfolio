@@ -6,8 +6,10 @@ import SideBar from "./components/SideBar";
 import styled from "styled-components";
 import About from './components/About';
 import Footer from './components/Footer';
+import useWindowSize from './hooks/useWindowSize';
 
 function App() {
+  const { width } = useWindowSize();
 
   const theme = {
     colors: {
@@ -21,14 +23,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Container>
-        <Side>
+        {width > 730 && <Side>
           <SideBar />
-        </Side>
+        </Side>}
         <Content>
           <Banner />
-          <About />
+          {/* <About /> */}
           <Footer />
         </Content>
       </Container>
@@ -44,6 +46,10 @@ const Container = styled.div`
 const Side = styled.div`
   width: 10%;
   margin: 0;
+
+  @media (max-width: 730px){
+    width: 0%;
+  }
 `;
 
 const Content = styled.div`
@@ -51,6 +57,10 @@ const Content = styled.div`
   margin: 0;
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.second};
+
+  @media (max-width: 730px){
+    width: 100%;
+  }
 `;
 
 export default App;

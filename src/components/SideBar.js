@@ -10,7 +10,7 @@ import {
 const SideBar = () => {
   return (
     <Bar>
-      <IconContext.Provider value={{ color: "#65ffda" }}>
+      <IconContext.Provider value={{ color: "#65ffda", size: 20 }}>
         <List>
           <Item>
             <AiFillGithub />

@@ -10,12 +10,13 @@ const Banner = () => {
           <h3>Hi, &nbsp; my name is</h3>
           <h1>Tobiloba.</h1>
           <h1 className="second">
-            I <span className='one'>build</span> things for the <span className='one'>web</span>.
+            I <span className="one">build</span> things for the{" "}
+            <span className="one">web</span>.
           </h1>
           <p>
             I’m a software engineer who specializes in building exceptional
             websites and applications. I enjoy solving problem, hence I deliver
-            top notch products and <span className='two'>solutions</span>.
+            top notch products and <span className="two">solutions</span>.
           </p>
           <Button>Get in touch</Button>
         </div>
@@ -78,6 +79,27 @@ const Inner = styled.div`
 
   .two {
     color: ${({ theme }) => theme.colors.top};
+  }
+
+  @media (max-width: 985px) {
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 730px) {
+    h1 {
+      font-size: 35px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    p {
+      width: 100%;
+    }
   }
 `;
 
