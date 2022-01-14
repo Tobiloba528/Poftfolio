@@ -1,28 +1,35 @@
 import styled from "styled-components";
-import {Button} from '../styles'
+import { BiMenuAltRight } from "react-icons/bi";
+import  useWindowSize from "../hooks/useWindowSize";
+import { Button } from "../styles";
 
 const NavBar = () => {
+  const { width } = useWindowSize();
   return (
     <Nav>
       <Inner>
         <h1>TOBILOBA</h1>
-        <List>
-          <li>
-            <Link>About</Link>
-          </li>
-          <li>
-            <Link>Experience</Link>
-          </li>
-          <li>
-            <Link>Portfolio</Link>
-          </li>
-          <li>
-            <Link>Contact</Link>
-          </li>
-          <li>
-            <Button>Resume</Button>
-          </li>
-        </List>
+        {width > 730 ? (
+          <List>
+            <li>
+              <Link>About</Link>
+            </li>
+            <li>
+              <Link>Experience</Link>
+            </li>
+            <li>
+              <Link>Portfolio</Link>
+            </li>
+            <li>
+              <Link>Contact</Link>
+            </li>
+            <li>
+              <Button>Resume</Button>
+            </li>
+          </List>
+        ) : (
+          <BiMenuAltRight size={40} color={'#65ffda'}/>
+        )}
       </Inner>
     </Nav>
   );
@@ -33,16 +40,16 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  background: ${({ theme }) => theme.colors.background};;
+  background: ${({ theme }) => theme.colors.background};
   color: white;
 
-  h1{
-      font-size: 30px;
-      color: ${({ theme }) => theme.colors.top}
+  h1 {
+    font-size: 30px;
+    color: ${({ theme }) => theme.colors.top};
   }
 
-  span{
-      color: red;
+  span {
+    color: red;
   }
 `;
 
@@ -62,12 +69,12 @@ const List = styled.ul`
 `;
 
 const Link = styled.p`
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
   padding-right: 30px;
   font-size: 15px;
   text-decoration: none;
   color: white;
-  font-family: 'Arvo', serif;
-`
+  font-family: "Arvo", serif;
+`;
 
 export default NavBar;

@@ -79,23 +79,31 @@ const StyledAbout = styled.div`
   width: 80%;
   min-height: 70vh;
   margin: 0 auto;
+  
 `;
 
 const Header = styled.div`
   display: flex;
   align-items: center;
+  width: 50%;
 
   h3 {
-    margin-right: 25px;
+    margin-right: 10px;
     font-size: 25px;
     color: ${({ theme }) => theme.colors.first};
   }
+
+  @media (max-width: 850px){
+    width: 100%;
+  }
+
 `;
 
 const Line = styled.div`
   background: ${({ theme }) => theme.colors.first};
   width: 200px;
   height: 1px;
+  flex: 1;
 `;
 
 const Inner = styled.div`
@@ -106,9 +114,15 @@ const Inner = styled.div`
   & > div {
     flex: 1;
   }
+
+  @media (max-width: 850px){
+    display: block;
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`
+
   p {
     line-height: 30px;
     font-size: 16px;
@@ -117,11 +131,22 @@ const Content = styled.div`
   span {
     color: ${({ theme }) => theme.colors.top};
   }
+
+  @media (max-width: 850px){
+    margin-bottom: 30px;
+
+    font-size: 12px;
+  p {
+    font-size: 12px;
+  }
+    /* width: 100%; */
+  }
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
+
 `;
 
 const ImageLayer = styled.div`

@@ -30,7 +30,7 @@ function App() {
         </Side>}
         <Content>
           <Banner />
-          {/* <About /> */}
+          <About />
           <Footer />
         </Content>
       </Container>
