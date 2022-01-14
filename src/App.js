@@ -7,6 +7,7 @@ import styled from "styled-components";
 import About from './components/About';
 import Footer from './components/Footer';
 import useWindowSize from './hooks/useWindowSize';
+import Port from './components/Port';
 
 function App() {
   const { width } = useWindowSize();
@@ -31,6 +32,7 @@ function App() {
         <Content>
           <Banner />
           <About />
+          <Port />
           <Footer />
         </Content>
       </Container>

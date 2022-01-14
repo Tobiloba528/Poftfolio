@@ -14,7 +14,7 @@ const NavBar = () => {
           <List>
             <li>
               <LinkItem>
-                <Link to="about" smooth={true} duration={1000}>
+                <Link to="about" smooth={true} duration={1000} offset={-100}>
                   About
                 </Link>
               </LinkItem>
@@ -28,7 +28,7 @@ const NavBar = () => {
             </li>
             <li>
               <LinkItem>
-                <Link to="portfolio" smooth={true} duration={1000}>
+                <Link to="portfolio" smooth={true} duration={1000} offset={-100}>
                   Portfolio
                 </Link>
               </LinkItem>

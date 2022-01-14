@@ -6,8 +6,8 @@ import { IconContext } from "react-icons";
 
 const About = () => {
   return (
-    <StyledAbout>
-      <Header id="about">
+    <StyledAbout id="about">
+      <Header>
         <h3>About Me </h3>
         <Line></Line>
       </Header>
@@ -77,7 +77,7 @@ const About = () => {
 
 const StyledAbout = styled.div`
   width: 80%;
-  min-height: 70vh;
+  min-height: 100vh;
   margin: 0 auto;
 `;
 
@@ -99,7 +99,6 @@ const Header = styled.div`
 
 const Line = styled.div`
   background: ${({ theme }) => theme.colors.first};
-  width: 200px;
   height: 1px;
   flex: 1;
 `;
@@ -160,7 +159,6 @@ const ImageLayer = styled.div`
     border-radius: 5px;
   }
 
-
   @media (max-width: 550px) {
     &:before {
       right: -10px;
@@ -179,7 +177,7 @@ const SecondLayer = styled.div`
     content: "";
     display: block;
     position: absolute;
-    background: rgb(101, 255, 218, 0.4);
+    background: rgb(101, 255, 218, 0.3);
     top: 0;
     right: 0;
     bottom: 0;
@@ -187,7 +185,7 @@ const SecondLayer = styled.div`
     border-radius: 5px;
   }
 
-  &::hover{
+  &::hover {
     background: red;
   }
 
@@ -195,7 +193,6 @@ const SecondLayer = styled.div`
     width: 15em;
     height: 15em;
   }
-
 `;
 
 const Image = styled.img`
