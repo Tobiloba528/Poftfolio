@@ -79,6 +79,11 @@ const StyledAbout = styled.div`
   width: 80%;
   min-height: 100vh;
   margin: 0 auto;
+
+
+  @media (max-width: 850px) {
+    margin-bottom: 50px
+  }
 `;
 
 const Header = styled.div`
