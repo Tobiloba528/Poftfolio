@@ -80,9 +80,8 @@ const StyledAbout = styled.div`
   min-height: 100vh;
   margin: 0 auto;
 
-
   @media (max-width: 850px) {
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
 `;
 
@@ -214,6 +213,7 @@ const Lists = styled.div`
 `;
 
 const List = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
   .icon {
     margin-right: 10px;
   }

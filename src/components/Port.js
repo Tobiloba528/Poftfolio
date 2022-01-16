@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { workData } from "../config/data";
+import { workData, sideProjects } from "../config/data";
+import ProjectItem from "./common/ProjectItem";
 import Work from "./common/Work";
 
 const Port = () => {
@@ -23,6 +24,25 @@ const Port = () => {
           />
         ))}
       </Works>
+      <Projects>
+        <h3>Other side Projects</h3>
+        <h4>Frontend Projects | Backend Project</h4>
+        <Row>
+          {sideProjects.map((project) => (
+            <ProjectItem
+              key={project.id}
+              title={project.title}
+              url={project.url}
+              github={project.github}
+              info={project.info}
+              tools={project.tools}
+            />
+          ))}
+        </Row>
+      </Projects>
+      <LinkContainer>
+        <a href="https://github.com/Tobiloba528">Click to view more</a>
+      </LinkContainer>
     </StyledPort>
   );
 };
@@ -58,6 +78,66 @@ const Line = styled.div`
 
 const Works = styled.div`
   width: 100%;
+`;
+
+const Projects = styled.div`
+  width: 90%;
+  margin-top: 200px;
+
+  h3 {
+    text-align: center;
+    font-size: 30px;
+    color: ${({ theme }) => theme.colors.first};
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 20px;
+    color: ${({ theme }) => theme.colors.first};
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 730px) {
+    width: 100%;
+  }
+
+  @media (max-width: 550px) {
+    h3 {
+      font-size: 25px;
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+  }
+`;
+
+const Row = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (max-width: 730px) {
+    display: block;
+  }
+`;
+
+const LinkContainer = styled.a`
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  a {
+    color: ${({ theme }) => theme.colors.top};
+    font-family: "Arvo", serif;
+  }
+
+  @media (max-width: 730px) {
+    width: 100%;
+  }
 `;
 
 export default Port;

@@ -87,7 +87,7 @@ const Content = styled.div`
 const Info = styled.div`
   position: relative;
   right: ${({ layout }) => (layout ? "0" : "13%")};
-  width: 100%;
+  width: 113%;
   background: #102340;
   color: ${({ theme }) => theme.colors.first};
   border-radius: 5px;
@@ -96,7 +96,7 @@ const Info = styled.div`
   line-height: 30px;
 
   @media (max-width: 1000px) {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     right: 0;
     left: 0;
