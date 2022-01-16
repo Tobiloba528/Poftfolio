@@ -50,7 +50,7 @@ const Inner = styled.div`
   /* justify-content: center; */
   /* align-items: center; */
   margin: 0 auto;
-  min-height: 76vh;
+  min-height: 90vh;
 
   h3 {
     color: ${({ theme }) => theme.colors.top};
