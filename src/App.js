@@ -47,10 +47,6 @@ function App() {
 
 const Container = styled.div`
   display: flex;
-
-  .blur{
-    filter: blur(1px);
-  }
 `;
 
 const Side = styled.div`

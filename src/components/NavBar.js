@@ -7,7 +7,6 @@ import useWindowSize from "../hooks/useWindowSize";
 import { Button } from "../styles";
 
 const NavBar = ({ isOpen, setIsOpen }) => {
-
   const toggleNav = () => {
     setIsOpen((isOpen) => !isOpen);
   };
@@ -74,10 +73,49 @@ const NavBar = ({ isOpen, setIsOpen }) => {
       </Inner>
       <MobileNav className={!isOpen && "navOpen"}>
         <MobileList>
-          <li>About</li>
-          <li>Experience</li>
-          <li>Work</li>
-          <li>Contact</li>
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              onClick={toggleNav}
+            >
+              About
+            </Link>
+          </li>
+            <li>
+              <Link
+                to="experience"
+                smooth={true}
+                duration={1000}
+                onClick={toggleNav}
+              >
+                Experience
+              </Link>
+            </li>
+          <li>
+            <Link
+              to="portfolio"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              onClick={toggleNav}
+            >
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link
+              to="contact"
+              smooth={true}
+              duration={1000}
+              onClick={toggleNav}
+            >
+              Contact
+            </Link>
+          </li>
           <li>
             <Button>Resume</Button>
           </li>
@@ -104,7 +142,7 @@ const Nav = styled.nav`
   span {
     color: red;
   }
-  
+
   .navOpen {
     transform: translateX(100%);
   }
@@ -170,12 +208,14 @@ const MobileList = styled.ul`
   width: 100%;
   height: 100%;
   padding: 0;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 
   li {
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
     font-family: "Arvo", serif;
     cursor: pointer;
   }
