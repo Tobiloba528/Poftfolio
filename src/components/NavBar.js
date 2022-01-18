@@ -1,10 +1,17 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 import useWindowSize from "../hooks/useWindowSize";
 import { Button } from "../styles";
 
-const NavBar = () => {
+const NavBar = ({ isOpen, setIsOpen }) => {
+
+  const toggleNav = () => {
+    setIsOpen((isOpen) => !isOpen);
+  };
+
   const { width } = useWindowSize();
   return (
     <Nav>
@@ -28,7 +35,12 @@ const NavBar = () => {
             </li>
             <li>
               <LinkItem>
-                <Link to="portfolio" smooth={true} duration={1000} offset={-100}>
+                <Link
+                  to="portfolio"
+                  smooth={true}
+                  duration={1000}
+                  offset={-100}
+                >
                   Portfolio
                 </Link>
               </LinkItem>
@@ -44,10 +56,33 @@ const NavBar = () => {
               <Button>Resume</Button>
             </li>
           </List>
+        ) : isOpen ? (
+          <AiOutlineClose
+            className="icon"
+            size={28}
+            color={"#65ffda"}
+            onClick={toggleNav}
+          />
         ) : (
-          <BiMenuAltRight size={40} color={"#65ffda"} />
+          <BiMenuAltRight
+            className="icon"
+            onClick={toggleNav}
+            size={40}
+            color={"#65ffda"}
+          />
         )}
       </Inner>
+      <MobileNav className={!isOpen && "navOpen"}>
+        <MobileList>
+          <li>About</li>
+          <li>Experience</li>
+          <li>Work</li>
+          <li>Contact</li>
+          <li>
+            <Button>Resume</Button>
+          </li>
+        </MobileList>
+      </MobileNav>
     </Nav>
   );
 };
@@ -69,6 +104,10 @@ const Nav = styled.nav`
   span {
     color: red;
   }
+  
+  .navOpen {
+    transform: translateX(100%);
+  }
 `;
 
 const Inner = styled.div`
@@ -78,6 +117,12 @@ const Inner = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  transition: all 1s ease;
+
+  .icon {
+    cursor: pointer;
+    z-index: 5;
+  }
 `;
 
 const List = styled.ul`
@@ -94,6 +139,46 @@ const LinkItem = styled.p`
   color: white;
   font-family: "Arvo", serif;
   cursor: pointer;
+`;
+
+const MobileNav = styled.div`
+  display: none;
+
+  @media (max-width: 730px) {
+    background: #102340;
+    height: 100vh;
+    width: 50%;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transition: transform 1s ease;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
+    left: 30%;
+  }
+`;
+
+const MobileList = styled.ul`
+  @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    margin-bottom: 50px;
+    font-family: "Arvo", serif;
+    cursor: pointer;
+  }
 `;
 
 export default NavBar;

@@ -38,11 +38,19 @@ const About = () => {
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
+                  HTML/CSS
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
                   React
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
                   Node.js
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Heroku
                 </Item>
               </List>
 
@@ -54,6 +62,10 @@ const About = () => {
                 <Item>
                   <ImPlay3 className="icon" />
                   Typescript
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Netlify
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
