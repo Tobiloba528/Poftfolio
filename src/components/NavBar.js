@@ -18,6 +18,13 @@ const NavBar = ({ isOpen, setIsOpen }) => {
         <h1 onClick={() => scroll.scrollToTop()}>TOBILOBA</h1>
         {width > 730 ? (
           <List>
+                        <li>
+              <LinkItem>
+                <Link onClick={() => scroll.scrollToTop()}>
+                  Home
+                </Link>
+              </LinkItem>
+            </li>
             <li>
               <LinkItem>
                 <Link to="about" smooth={true} duration={1000} offset={-100}>
@@ -26,11 +33,11 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               </LinkItem>
             </li>
             <li>
-              <LinkItem>
+              {/* <LinkItem>
                 <Link to="experience" smooth={true} duration={1000}>
                   Experience
                 </Link>
-              </LinkItem>
+              </LinkItem> */}
             </li>
             <li>
               <LinkItem>
@@ -73,6 +80,18 @@ const NavBar = ({ isOpen, setIsOpen }) => {
       </Inner>
       <MobileNav className={!isOpen && "navOpen"}>
         <MobileList>
+        <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              onClick={toggleNav}
+            >
+              Home
+            </Link>
+          </li>
+
           <li>
             <Link
               to="about"
@@ -84,7 +103,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               About
             </Link>
           </li>
-            <li>
+            {/* <li>
               <Link
                 to="experience"
                 smooth={true}
@@ -93,7 +112,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               >
                 Experience
               </Link>
-            </li>
+            </li> */}
           <li>
             <Link
               to="portfolio"

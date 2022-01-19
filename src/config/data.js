@@ -4,7 +4,7 @@ export const workData = [
     title: "Get-Eng Website",
     imageSrc: "get-eng.png",
     infoText:
-      "Get-Eng is a platform where companies posts job vacancies and quilified engineers/developers can search and get a suitable job based on their skillsets.",
+      "Get-Eng is a platform where companies posts job vacancies and qualified engineers/developers can search and get a suitable job based on their skillsets.",
     tools: ["React", "CSS Module", "Node", "Express", "MongoDB"],
     url: "https://get-eng.netlify.app/",
     direction: false,
@@ -96,3 +96,46 @@ export const sideProjects = [
     tools: ["Node", "Express", "JWT"],
   },
 ];
+
+export const resumeData = {
+  jobs: [
+    {
+      expData: {
+        company: "Sifax Groups",
+        position: "Frontend Developer",
+        period: "January 2021 - present",
+        details: [
+          "Building a fully functional admin web application for keeping tracks of trips and revenue records, accepting trips and so on",
+          "Improve the user experience by implementing various user friendly features.",
+          "Work closely with the Product designers to ensure every design details is implemented.",
+          "Work closely with the Backend developers when integrating API endpoints to ensure full authentication and functionalities.",
+        ],
+      },
+    },
+    {
+      expData: {
+        company: "Codementor.io",
+        position: "Software Developer",
+        period: "July 2011 - January 2021",
+        details: [
+          "Helped mentees solve the blockers and challenges in their code. ",
+          "Worked with developers to design optimised algorithms.",
+          "Integrated software components and third-party programs.",
+          "Improved legacy codebase",
+        ],
+      },
+    },
+    {
+      expData: {
+        company: "Bluscript Academy",
+        position: "Information Technology Support",
+        period: "June 2016 - November 2016",
+        details: [
+          "Installed and configured computer hardware, software, systems, networks, printers, and scanners",
+          "Monitored and maintained computer systems and networks.",
+          "Responded in a timely manner to service issues and requests. ",
+        ],
+      },
+    },
+  ],
+};
