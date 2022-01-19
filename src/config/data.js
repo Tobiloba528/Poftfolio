@@ -1,6 +1,16 @@
 export const workData = [
   {
     id: 1,
+    title: "Admin Website(Go Truck)",
+    imageSrc: "Dashboard.png",
+    infoText:
+      "Admin website is a platform where users(company or driver) can view and manage payouts/payments, accept, assign trips to drivers and tracks the drivers while on a trip, revenue and a lot more.",
+    tools: ["React", "ANTD Design", "CSS", "Redux", "Pubnub"],
+    url: "https://dev.company.gotruck.io/",
+    direction: false,
+  },
+  {
+    id: 2,
     title: "Get-Eng Website",
     imageSrc: "get-eng.png",
     infoText:
@@ -10,7 +20,7 @@ export const workData = [
     direction: false,
   },
   {
-    id: 2,
+    id: 3,
     title: "Capture",
     imageSrc: "capture.png",
     infoText:
@@ -20,7 +30,7 @@ export const workData = [
     direction: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "Women Organization of Nig",
     imageSrc: "wan.png",
     infoText:
@@ -30,7 +40,7 @@ export const workData = [
     direction: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "SendIt Web app",
     imageSrc: "send-it.png",
     infoText:
