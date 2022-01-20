@@ -18,11 +18,9 @@ const NavBar = ({ isOpen, setIsOpen }) => {
         <h1 onClick={() => scroll.scrollToTop()}>TOBILOBA</h1>
         {width > 730 ? (
           <List>
-                        <li>
+            <li>
               <LinkItem>
-                <Link onClick={() => scroll.scrollToTop()}>
-                  Home
-                </Link>
+                <Link onClick={() => scroll.scrollToTop()}>Home</Link>
               </LinkItem>
             </li>
             <li>
@@ -59,7 +57,14 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               </LinkItem>
             </li>
             <li>
-              <Button>Resume</Button>
+              <Button>
+                <a
+                  href="https://drive.google.com/file/d/1Z8zdOtLAaT3YgE14TfwMouEPPhtLgQWt/view?usp=sharing"
+                  target="_blank"
+                >
+                  Resume
+                </a>
+              </Button>
             </li>
           </List>
         ) : isOpen ? (
@@ -80,7 +85,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
       </Inner>
       <MobileNav className={!isOpen && "navOpen"}>
         <MobileList>
-        <li>
+          <li>
             <Link
               to="about"
               smooth={true}
@@ -103,7 +108,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
               About
             </Link>
           </li>
-            {/* <li>
+          {/* <li>
               <Link
                 to="experience"
                 smooth={true}
@@ -136,7 +141,14 @@ const NavBar = ({ isOpen, setIsOpen }) => {
             </Link>
           </li>
           <li>
-            <Button>Resume</Button>
+            <Button>
+              <a
+                href="https://drive.google.com/file/d/1Z8zdOtLAaT3YgE14TfwMouEPPhtLgQWt/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+              </a>
+            </Button>
           </li>
         </MobileList>
       </MobileNav>
@@ -160,6 +172,11 @@ const Nav = styled.nav`
 
   span {
     color: red;
+  }
+
+  a{
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.top};
   }
 
   .navOpen {
@@ -231,7 +248,6 @@ const MobileList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
   li {
     margin: 0 0 50px 0;
