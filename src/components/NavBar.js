@@ -11,6 +11,11 @@ const NavBar = ({ isOpen, setIsOpen }) => {
     setIsOpen((isOpen) => !isOpen);
   };
 
+  const goHome = () => {
+    scroll.scrollToTop()
+    toggleNav()
+  }
+
   const { width } = useWindowSize();
   return (
     <Nav>
@@ -87,11 +92,8 @@ const NavBar = ({ isOpen, setIsOpen }) => {
         <MobileList>
           <li>
             <Link
-              to="about"
-              smooth={true}
-              duration={1000}
-              offset={-100}
-              onClick={toggleNav}
+              onClick={goHome}
+              // onClick={toggleNav}
             >
               Home
             </Link>
