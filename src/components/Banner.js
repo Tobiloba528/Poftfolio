@@ -1,21 +1,27 @@
 import styled from "styled-components";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Button } from "../styles";
 import Lottie from "react-lottie";
-import { compAnimation, titleAnim, fade } from '../animation'
+import { compAnimation, titleAnim, fade } from "../animation";
 
 const Banner = () => {
   return (
     <StyledBanner>
-      <Inner variants={compAnimation} initial='hidden' animate='show'>
+      <Inner variants={compAnimation} initial="hidden" animate="show">
         <div>
-          <motion.h3 variants={titleAnim}>Hi, &nbsp; my name is</motion.h3>
-          <motion.h1 variants={titleAnim}>Tobiloba.</motion.h1>
-          <motion.h1 className="second" variants={titleAnim}>
-            I <span className="one">build</span> things for the{" "}
-            <span className="one">web</span>.
-          </motion.h1>
+          <Hide>
+            <motion.h3 variants={titleAnim}>Hi, &nbsp; my name is</motion.h3>
+          </Hide>
+          <Hide>
+            <motion.h1 variants={titleAnim}>Tobiloba.</motion.h1>
+          </Hide>
+          {/* <Hide> */}
+            <motion.h1 className="second" variants={titleAnim}>
+              I <span className="one">build</span> things for the{" "}
+              <span className="one">web</span>.
+            </motion.h1>
+          {/* </Hide> */}
           <motion.p variants={fade}>
             I’m a software engineer who specializes in building exceptional
             websites and applications. I enjoy solving problem, hence I deliver
@@ -106,6 +112,10 @@ const Inner = styled(motion.div)`
       width: 100%;
     }
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
 `;
 
 export default Banner;
