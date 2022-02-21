@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
   border: 1px solid ${({ theme }) => theme.colors.top};
   padding: 10px 30px;

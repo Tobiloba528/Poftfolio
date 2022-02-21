@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
+import { compAnimation, fade } from '../animation'
 import { IconContext } from "react-icons";
 import {
   AiFillGithub,
@@ -11,23 +13,23 @@ const SideBar = () => {
   return (
     <Bar>
       <IconContext.Provider value={{ color: "#65ffda", size: 24 }}>
-        <List>
-          <Item>
+        <List variants={compAnimation} initial='hidden' animate='show'>
+          <Item variants={fade}>
             <a href="https://github.com/Tobiloba528" target="_blank">
               <AiFillGithub />
             </a>
           </Item>
-          <Item>
+          <Item variants={fade}>
             <a href="https://twitter.com/boy__tobiloba" target="_blank">
               <AiOutlineTwitter />
             </a>
           </Item>
-          <Item>
+          <Item variants={fade}>
             <a href="https://www.instagram.com/iam_thobyson/" target="_blank">
               <AiFillInstagram />
             </a>
           </Item>
-          <Item>
+          <Item variants={fade}>
             <a
               href="https://www.linkedin.com/in/omitomo-tobiloba/"
               target="_blank"
@@ -35,7 +37,7 @@ const SideBar = () => {
               <AiFillLinkedin />
             </a>
           </Item>
-          <Item remove>
+          <Item remove variants={fade}>
             <Line></Line>
           </Item>
         </List>
@@ -56,12 +58,12 @@ const Bar = styled.div`
   justify-content: flex-end;
 `;
 
-const List = styled.ul`
+const List = styled(motion.ul)`
   list-style: none;
   position: fixed;
 `;
 
-const Item = styled.li`
+const Item = styled(motion.li)`
   margin-bottom: ${({ remove }) => (remove ? "-10px" : "25px")};
 `;
 

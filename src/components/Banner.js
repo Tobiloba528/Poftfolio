@@ -1,26 +1,28 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 import { Link } from "react-scroll";
 import { Button } from "../styles";
 import Lottie from "react-lottie";
+import { compAnimation, titleAnim, fade } from '../animation'
 
 const Banner = () => {
   return (
     <StyledBanner>
-      <Inner>
+      <Inner variants={compAnimation} initial='hidden' animate='show'>
         <div>
-          <h3>Hi, &nbsp; my name is</h3>
-          <h1>Tobiloba.</h1>
-          <h1 className="second">
+          <motion.h3 variants={titleAnim}>Hi, &nbsp; my name is</motion.h3>
+          <motion.h1 variants={titleAnim}>Tobiloba.</motion.h1>
+          <motion.h1 className="second" variants={titleAnim}>
             I <span className="one">build</span> things for the{" "}
             <span className="one">web</span>.
-          </h1>
-          <p>
+          </motion.h1>
+          <motion.p variants={fade}>
             I’m a software engineer who specializes in building exceptional
             websites and applications. I enjoy solving problem, hence I deliver
             top notch products and <span className="two">solutions</span>.
-          </p>
+          </motion.p>
           <Link to="contact" smooth={true} duration={1000}>
-            <Button>Get in touch</Button>
+            <Button variants={fade}>Get in touch</Button>
           </Link>
         </div>
       </Inner>
@@ -42,7 +44,7 @@ const StyledBanner = styled.div`
   /* min-height: 76vh; */
 `;
 
-const Inner = styled.div`
+const Inner = styled(motion.div)`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
   width: 90%;
   display: flex;
