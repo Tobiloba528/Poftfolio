@@ -16,12 +16,12 @@ const Banner = () => {
           <Hide>
             <motion.h1 variants={titleAnim}>Tobiloba.</motion.h1>
           </Hide>
-          {/* <Hide> */}
+          <Hide>
             <motion.h1 className="second" variants={titleAnim}>
               I <span className="one">build</span> things for the{" "}
               <span className="one">web</span>.
             </motion.h1>
-          {/* </Hide> */}
+          </Hide>
           <motion.p variants={fade}>
             I’m a software engineer who specializes in building exceptional
             websites and applications. I enjoy solving problem, hence I deliver
