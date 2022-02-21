@@ -230,7 +230,6 @@ const Lists = styled.div`
 
 const List = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-  .import { useScroll } from './common/useScroll';
 icon {
     margin-right: 10px;
   }
