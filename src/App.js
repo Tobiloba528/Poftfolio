@@ -50,6 +50,7 @@ function App() {
 
 const Container = styled.div`
   display: flex;
+  background: ${({ theme }) => theme.colors.background};
 `;
 
 const Side = styled.div`
