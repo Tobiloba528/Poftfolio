@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 import { GrPlayFill } from "react-icons/gr";
 import { FiPlay } from "react-icons/fi";
 import { ImPlay3 } from "react-icons/im";
 import { IconContext } from "react-icons";
+import { useScroll } from './common/useScroll'
+import { scrollReveal } from '../animation'
 
 const About = () => {
+  const [element, controls] = useScroll()
   return (
-    <StyledAbout id="about">
+    <StyledAbout id="about" ref={element} variants={scrollReveal} animate={controls} initial='hidden'>
       <Header>
         <h3>About Me </h3>
         <Line></Line>
@@ -87,7 +91,7 @@ const About = () => {
   );
 };
 
-const StyledAbout = styled.div`
+const StyledAbout = styled(motion.div)`
   width: 80%;
   min-height: 100vh;
   margin: 0 auto;
@@ -226,7 +230,8 @@ const Lists = styled.div`
 
 const List = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-  .icon {
+  .import { useScroll } from './common/useScroll';
+icon {
     margin-right: 10px;
   }
 `;

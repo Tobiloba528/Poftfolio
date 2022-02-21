@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
 import { workData, sideProjects } from "../config/data";
 import ProjectItem from "./common/ProjectItem";
 import Work from "./common/Work";
@@ -47,7 +48,7 @@ const Port = () => {
   );
 };
 
-const StyledPort = styled.div`
+const StyledPort = styled(motion.div)`
   width: 90%;
   min-height: 70vh;
   margin: 0 auto;
