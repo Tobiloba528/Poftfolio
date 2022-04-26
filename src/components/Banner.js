@@ -6,6 +6,7 @@ import Lottie from "react-lottie";
 import { compAnimation, titleAnim, fade } from "../animation";
 
 const Banner = () => {
+  
   return (
     <StyledBanner>
       <Inner variants={compAnimation} initial="hidden" animate="show">
