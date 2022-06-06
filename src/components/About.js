@@ -75,6 +75,10 @@ const About = () => {
                   <ImPlay3 className="icon" />
                   MERN stack
                 </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  NEXT JS
+                </Item>
               </List>
             </IconContext.Provider>
           </Lists>
