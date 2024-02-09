@@ -64,7 +64,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
             <li>
               <Button>
                 <a
-                  href="https://drive.google.com/file/d/13pkUPVfxKcFc2Jmhj2ptxeUR2ZtwQSt-/view?usp=sharing"
+                  href="https://drive.google.com/file/d/133e--I4wuQ6fxbgGNg4GRrYD8tWr5M5z/view?usp=sharing"
                   target="_blank"
                 >
                   Resume
@@ -145,7 +145,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
           <li>
             <Button>
               <a
-                href="https://drive.google.com/file/d/13pkUPVfxKcFc2Jmhj2ptxeUR2ZtwQSt-/view?usp=sharing"
+                href="https://drive.google.com/file/d/133e--I4wuQ6fxbgGNg4GRrYD8tWr5M5z/view?usp=sharing"
                 target="_blank"
               >
                 Resume
