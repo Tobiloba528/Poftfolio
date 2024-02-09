@@ -18,20 +18,20 @@ const About = () => {
       <Inner>
         <Content>
           <p>
-            Hi, my name is Omitomo Tobiloba, a software developer from Nigeria.
+            Hi, my name is Tobiloba Omitomo, a software developer based in Ontario, Canada.
             I enjoy building things from nothing and also <span> solving</span>{" "}
-            problems
+            problems.
           </p>
           <p>
-            I am highly skilled in building scalable web applications leveraging
-            on technologies such as Javascript, React and Node. I'm always happy
+            I am highly skilled in building scalable websites, web and mobile applications by leveraging
+            on technologies such as Javascript, ReactJS, React Native, NextJS, NodeJS and many more. I'm always happy
             to learn new things and work on challenging projects either by
             myself or with an amazing team. I am driven with the goal to always
             deliver top-notch products with focus on fast, elegant and
             accessible user experiences.
           </p>
           <p>
-            Her are some of the technologies I have been working with recently:
+            Here are some of the technologies I have been working with recently:
           </p>
           <Lists>
             <IconContext.Provider value={{ color: "#65ffda" }}>
@@ -54,7 +54,15 @@ const About = () => {
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  Heroku
+                  GraphQL
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  RestAPI
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Databases
                 </Item>
               </List>
 
@@ -78,6 +86,14 @@ const About = () => {
                 <Item>
                   <ImPlay3 className="icon" />
                   NEXT JS
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Git
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Firebase
                 </Item>
               </List>
             </IconContext.Provider>
