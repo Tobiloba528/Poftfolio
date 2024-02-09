@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Button } from "../styles";
-import Lottie from "react-lottie";
 import { compAnimation, titleAnim, fade } from "../animation";
 
 const Banner = () => {
