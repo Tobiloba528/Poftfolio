@@ -72,7 +72,7 @@ export const sideProjects = [
   },
   {
     id: 3,
-    title: "Gate Pass",
+    title: "GatePass",
     url: "https://github.com/Tobiloba528/Gate-pass",
     github: "https://github.com/Tobiloba528/Gate-pass",
     info: "Cate Pass Clone is a full clone of Gate Pass official website.",
