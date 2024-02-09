@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IconContext } from "react-icons";
+import moment from 'moment';
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -53,8 +54,7 @@ const Footer = () => {
       </IconContext.Provider>
 
       <End>
-        Built by <span className="one">Omitomo Tobiloba</span>. Design inspired
-        by <span className="two">Brittany Chiang</span>
+      &copy; {moment().year()} <span className="one">Omitomo Tobiloba </span>. All rights Reserved 
       </End>
     </StyledFooter>
   );
