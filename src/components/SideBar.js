@@ -25,7 +25,7 @@ const SideBar = () => {
             </a>
           </Item>
           <Item variants={fade}>
-            <a href="https://www.instagram.com/iam_thobyson/" target="_blank">
+            <a href="https://www.instagram.com/tobiloba_grm/" target="_blank">
               <AiFillInstagram />
             </a>
           </Item>

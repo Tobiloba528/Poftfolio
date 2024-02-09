@@ -25,7 +25,7 @@ const Banner = () => {
           </Hide>
           <motion.p variants={fade}>
             I’m a software engineer who specializes in building exceptional
-            websites and applications. I enjoy solving problem, hence I deliver
+            websites and mobile applications. I enjoy solving problem, hence I deliver
             top notch products and <span className="two">solutions</span>.
           </motion.p>
           <Link to="contact" smooth={true} duration={1000}>
