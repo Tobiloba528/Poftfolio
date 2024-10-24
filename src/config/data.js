@@ -11,6 +11,16 @@ export const workData = [
   },
   {
     id: 2,
+    title: "FCALSO",
+    imageSrc: "fcalso.png",
+    infoText:
+      "Festival City Adult Living Support Organization (FCALSO) is one of South Western Ontario's leading Non-For Profit providers of support for adults with developmental disabilities.",
+    tools: ["React", "NextJS", "Framer-motion", "Tailwindcss"],
+    url: "https://www.fcalso.ca/",
+    direction: true,
+  },
+  {
+    id: 3,
     title: "TXTConnect",
     imageSrc: "txtconnect.png",
     infoText:
@@ -18,16 +28,6 @@ export const workData = [
     tools: ["React", "NextJS", "CSS Module", "Node", "Express", "MongoDB"],
     url: "https://txtconnect.net/",
     direction: false,
-  },
-  {
-    id: 3,
-    title: "Wopecar",
-    imageSrc: "wopecar.png",
-    infoText:
-      "Wopecar is an online car rental platform.",
-    tools: ["React", "NextJS", "Framer-motion", "Styled-component", "react-router"],
-    url: "https://wopecar.com//",
-    direction: true,
   },
   {
     id: 4,
@@ -41,12 +41,12 @@ export const workData = [
   },
   {
     id: 5,
-    title: "BeaconRemit",
-    imageSrc: "beaconremit.png",
+    title: "Wopecar",
+    imageSrc: "wopecar.png",
     infoText:
-      "BeaconRemit provide a platform to send money to friends and relatives in Africa in a secure, cost-effective, and time-efficient manner.",
-    tools: ["React", "Bootstrap", "Sass", "react-router", "Redux", "NextJS"],
-    url: "https://beaconremit.com/",
+      "Wopecar is an online car rental platform.",
+    tools: ["React", "NextJS", "Framer-motion", "Styled-component", "react-router"],
+    url: "https://wopecar.com/",
     direction: true,
   },
 ];
