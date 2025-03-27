@@ -64,7 +64,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
             <li>
               <Button>
                 <a
-                  href="https://drive.google.com/file/d/1Fs92GMsxAchBgw0VZL-u4Cyp8UNvkHS3/view?usp=sharing"
+                  href="https://docs.google.com/document/d/1KGx018q4z7gOLnQOjEApegbZPeqAp5dgHGz3cWqzOdk/edit?usp=sharing"
                   target="_blank"
                 >
                   Resume
