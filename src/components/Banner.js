@@ -5,7 +5,6 @@ import { Button } from "../styles";
 import { compAnimation, titleAnim, fade } from "../animation";
 
 const Banner = () => {
-  
   return (
     <StyledBanner>
       <Inner variants={compAnimation} initial="hidden" animate="show">
@@ -18,14 +17,15 @@ const Banner = () => {
           </Hide>
           <Hide>
             <motion.h1 className="second" variants={titleAnim}>
-              I <span className="one">build</span> things for the{" "}
-              <span className="one">web</span>.
+              I <span className="one">build</span> modern digital{" "}
+              <span className="one">solutions</span>.
             </motion.h1>
           </Hide>
           <motion.p variants={fade}>
             I’m a software engineer who specializes in building exceptional
-            websites and mobile applications. I enjoy solving problem, hence I deliver
-            top notch products and <span className="two">solutions</span>.
+            digital solutions for businesses. I enjoy solving problem, hence I
+            deliver top notch products and{" "}
+            <span className="two">solutions</span>.
           </motion.p>
           <Link to="contact" smooth={true} duration={1000}>
             <Button variants={fade}>Get in touch</Button>

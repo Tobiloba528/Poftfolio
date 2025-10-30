@@ -1,16 +1,22 @@
 import styled from "styled-components";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 import { GrPlayFill } from "react-icons/gr";
 import { FiPlay } from "react-icons/fi";
 import { ImPlay3 } from "react-icons/im";
 import { IconContext } from "react-icons";
-import { useScroll } from './common/useScroll'
-import { scrollReveal } from '../animation'
+import { useScroll } from "./common/useScroll";
+import { scrollReveal } from "../animation";
 
 const About = () => {
-  const [element, controls] = useScroll()
+  const [element, controls] = useScroll();
   return (
-    <StyledAbout id="about" ref={element} variants={scrollReveal} animate={controls} initial='hidden'>
+    <StyledAbout
+      id="about"
+      ref={element}
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+    >
       <Header>
         <h3>About Me </h3>
         <Line></Line>
@@ -18,17 +24,17 @@ const About = () => {
       <Inner>
         <Content>
           <p>
-            Hi, my name is Tobiloba Omitomo, a software developer based in Ontario, Canada.
-            I enjoy building things from nothing and also <span> solving</span>{" "}
-            problems.
+            Hi, my name is Tobiloba Omitomo, a software developer based in
+            Ontario, Canada. I enjoy building things from nothing and also{" "}
+            <span> solving</span> problems.
           </p>
           <p>
-            I am highly skilled in building scalable websites, web and mobile applications by leveraging
-            on technologies such as Javascript, ReactJS, React Native, NextJS, NodeJS and many more. I'm always happy
-            to learn new things and work on challenging projects either by
-            myself or with an amazing team. I am driven with the goal to always
-            deliver top-notch products with focus on fast, elegant and
-            accessible user experiences.
+            I am highly skilled in building scalable web and mobile applications
+            by leveraging on technologies such as Javascript, Java, Spring,
+            ReactJS, React Native, NextJS, NodeJS and many more. I'm always
+            happy to learn new things and work on challenging projects. I am
+            driven with the goal to always deliver top-notch products with focus
+            on fast, elegant and accessible user experiences.
           </p>
           <p>
             Here are some of the technologies I have been working with recently:
@@ -42,10 +48,6 @@ const About = () => {
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  HTML/CSS
-                </Item>
-                <Item>
-                  <ImPlay3 className="icon" />
                   React
                 </Item>
                 <Item>
@@ -54,7 +56,11 @@ const About = () => {
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  GraphQL
+                  NextJS
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  MongoDB
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
@@ -62,38 +68,38 @@ const About = () => {
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  Databases
+                  MERN Stack
                 </Item>
               </List>
 
               <List>
                 <Item>
                   <ImPlay3 className="icon" />
-                  MongoDB
+                  Java
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  Typescript
+                  Spring Framework
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  Netlify
+                  Spring Boot
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  MERN stack
+                  SQL
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
-                  NEXT JS
+                  AWS
+                </Item>
+                <Item>
+                  <ImPlay3 className="icon" />
+                  Azure
                 </Item>
                 <Item>
                   <ImPlay3 className="icon" />
                   Git
-                </Item>
-                <Item>
-                  <ImPlay3 className="icon" />
-                  Firebase
                 </Item>
               </List>
             </IconContext.Provider>
@@ -102,7 +108,7 @@ const About = () => {
         <ImageContainer>
           <ImageLayer>
             <SecondLayer>
-              <Image src="tobi.jpg" alt="Picture" />
+              <Image src="omitomo.PNG" alt="Picture" />
             </SecondLayer>
           </ImageLayer>
         </ImageContainer>
@@ -250,7 +256,7 @@ const Lists = styled.div`
 
 const List = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-icon {
+  icon {
     margin-right: 10px;
   }
 `;
